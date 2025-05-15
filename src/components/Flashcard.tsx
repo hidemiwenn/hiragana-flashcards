@@ -10,27 +10,27 @@ interface FlashcardProps {
 
 const Flashcard: React.FC<FlashcardProps> = ({ text, onNext, onPrev }) => {
   return (
-    <div className="flex items-center justify-center w-full h-full">
+    <div className="flex items-center justify-center w-full h-full max-h-full">
       <button 
         onClick={onPrev}
-        className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
+        className="p-1 text-gray-600 hover:text-gray-900 transition-colors"
         aria-label="Previous flashcard"
       >
-        <ArrowLeft size={28} />
+        <ArrowLeft size={24} />
       </button>
       
-      <div className="flex-1 max-w-md flex items-center justify-center px-2">
-        <div className="w-full aspect-[4/3] bg-white rounded-xl shadow-lg flex items-center justify-center p-4 select-none">
-          <p className="text-6xl font-medium text-center">{text}</p>
+      <div className="flex-1 max-w-md flex items-center justify-center px-1">
+        <div className="w-full bg-white rounded-xl shadow-lg flex items-center justify-center p-2 select-none" style={{ maxHeight: "90%" }}>
+          <p className="text-5xl font-medium text-center">{text}</p>
         </div>
       </div>
       
       <button 
         onClick={onNext}
-        className="p-2 text-gray-600 hover:text-gray-900 transition-colors"
+        className="p-1 text-gray-600 hover:text-gray-900 transition-colors"
         aria-label="Next flashcard"
       >
-        <ArrowRight size={28} />
+        <ArrowRight size={24} />
       </button>
     </div>
   );

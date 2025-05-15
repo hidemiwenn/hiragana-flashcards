@@ -35,14 +35,14 @@ const Index = () => {
   return (
     <div className="h-[100vh] flex flex-col bg-gradient-to-br from-blue-50 to-purple-50 overflow-hidden">
       {/* Header */}
-      <header className="p-3 flex justify-between items-center">
-        <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
+      <header className="p-1 sm:p-2 flex justify-between items-center">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
           ひらがな
         </h1>
         <Button
           variant="ghost"
           onClick={handleOpenEditModal}
-          className="text-xl p-2"
+          className="text-xl p-1 sm:p-2"
           aria-label="Edit flashcards"
         >
           ⋯
@@ -50,7 +50,7 @@ const Index = () => {
       </header>
 
       {/* Flashcard Container */}
-      <main className="flex-1 flex items-center justify-center py-2 px-3 overflow-hidden">
+      <main className="flex-1 flex items-center justify-center py-1 px-2 overflow-hidden">
         {currentFlashcard ? (
           <Flashcard
             text={currentFlashcard.text}
@@ -58,7 +58,7 @@ const Index = () => {
             onPrev={prevFlashcard}
           />
         ) : (
-          <div className="text-center p-8 bg-white rounded-xl shadow-md">
+          <div className="text-center p-4 sm:p-8 bg-white rounded-xl shadow-md">
             <p className="text-lg text-gray-600 mb-4">
               No flashcards available. Click the ⋯ button to add some!
             </p>
