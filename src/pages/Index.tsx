@@ -33,7 +33,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="h-[100vh] flex flex-col bg-gradient-to-br from-blue-50 to-purple-50 overflow-hidden">
       {/* Header */}
       <header className="p-4 flex justify-between items-center">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -50,7 +50,7 @@ const Index = () => {
       </header>
 
       {/* Flashcard Container */}
-      <main className="flex-1 flex items-center justify-center p-4">
+      <main className="flex-1 flex items-center justify-center p-4 overflow-hidden">
         {currentFlashcard ? (
           <Flashcard
             text={currentFlashcard.text}

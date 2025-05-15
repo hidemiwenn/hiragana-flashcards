@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,7 +96,15 @@
     @apply border-border;
   }
 
+  html, body {
+    @apply h-full overflow-hidden;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground h-full;
+  }
+  
+  #root {
+    @apply h-full;
   }
 }
