@@ -37,7 +37,7 @@ const Index = () => {
       {/* Header */}
       <header className="p-1 sm:p-2 flex justify-between items-center">
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
-          ひらがな
+          ひらがなふらっしゅかーど
         </h1>
         <Button
           variant="ghost"
