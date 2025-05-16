@@ -12,7 +12,7 @@
 /* Add specific styles for landscape mode */
 @media (max-height: 500px) {
   #root {
-    max-height: 100vh;
+    max-height: 90vh;
     overflow: hidden;
   }
 }
