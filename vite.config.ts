@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    sourcemap: true,
     assetsDir: '',
     rollupOptions: {
       output: {
