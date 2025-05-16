@@ -16,3 +16,7 @@
     overflow: hidden;
   }
 }
+
+.card-text{
+  padding:2.5em;
+}
