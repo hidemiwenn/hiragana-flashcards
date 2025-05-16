@@ -20,8 +20,8 @@ const Flashcard: React.FC<FlashcardProps> = ({ text, onNext, onPrev }) => {
       </button>
       
       <div className="flex-1 max-w-md flex items-center justify-center px-1">
-        <div className="w-full bg-white rounded-xl shadow-lg flex items-center justify-center p-2 select-none" style={{ maxHeight: "90%" }}>
-          <p className="text-5xl font-medium text-center py-6">{text}</p>
+        <div className="w-full h-full bg-white rounded-xl shadow-lg flex items-center justify-center p-2 select-none" style={{ maxHeight: "90%" }}>
+          <p className="text-5xl font-medium text-center py-6 card-text">{text}</p>
         </div>
       </div>
       
