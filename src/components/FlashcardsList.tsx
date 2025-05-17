@@ -83,7 +83,7 @@ const FlashcardsList: React.FC<FlashcardsListProps> = ({
         <Input
           value={newText}
           onChange={(e) => setNewText(e.target.value)}
-          placeholder="Add new flashcard"
+          placeholder="あたらしいカードをつくる"
           className="flex-1"
           onKeyDown={(e) => e.key === "Enter" && handleAddNew()}
         />

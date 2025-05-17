@@ -33,7 +33,7 @@ const EditModal: React.FC<EditModalProps> = ({
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Edit Flashcards</DialogTitle>
+          <DialogTitle>カードをかえる</DialogTitle>
         </DialogHeader>
         <FlashcardsList
           flashcards={flashcards}

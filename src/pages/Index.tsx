@@ -55,9 +55,9 @@ const Index = () => {
         ) : (
           <div className="text-center p-8">
             <p className="text-lg text-gray-600 mb-4">
-              No flashcards available. Click the ⋯ button to add some!
+              カードがないよ。⋯ ボタンをおして つくってみよう！
             </p>
-            <Button onClick={handleOpenEditModal}>Add Flashcards</Button>
+            <Button onClick={handleOpenEditModal}>カードをつくる</Button>
           </div>
         )}
       </main>
