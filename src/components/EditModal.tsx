@@ -46,7 +46,7 @@ const EditModal: React.FC<EditModalProps> = ({
             onClick={handleSaveAndClose}
             className="w-full mt-4 bg-black text-white hover:bg-gray-800"
           >
-            保存する
+            セーブする
           </Button>
         </DialogFooter>
       </DialogContent>

@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Flashcard from "@/components/Flashcard";
 import EditModal from "@/components/EditModal";
 import { useFlashcards } from "@/hooks/useFlashcards";
@@ -8,6 +8,7 @@ import { toast } from "sonner";
 
 const Index = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(false);
   const {
     flashcards,
     currentFlashcard,
@@ -17,6 +18,22 @@ const Index = () => {
     deleteFlashcard,
     saveFlashcards
   } = useFlashcards();
+
+  useEffect(() => {
+    // Check if this is the first visit
+    const hasVisitedBefore = localStorage.getItem("hasVisitedBefore");
+    if (!hasVisitedBefore) {
+      setShowWelcome(true);
+      localStorage.setItem("hasVisitedBefore", "true");
+      
+      // Hide welcome message after 3 seconds
+      const timer = setTimeout(() => {
+        setShowWelcome(false);
+      }, 3000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const handleOpenEditModal = () => {
     setIsEditModalOpen(true);
@@ -47,6 +64,12 @@ const Index = () => {
 
       {/* Flashcard Container */}
       <main className="flex-1 flex items-center justify-center overflow-hidden">
+        {showWelcome && (
+          <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 z-20">
+            <p className="text-4xl text-gray-800">タップして</p>
+          </div>
+        )}
+        
         {currentFlashcard ? (
           <Flashcard
             text={currentFlashcard.text}
