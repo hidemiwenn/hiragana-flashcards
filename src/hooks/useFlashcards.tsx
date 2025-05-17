@@ -27,6 +27,17 @@ export function useFlashcards() {
     sessionStorage.setItem("flashcards", JSON.stringify(cards));
   };
 
+  const showRandomFlashcard = () => {
+    if (flashcards.length <= 1) return;
+    
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * flashcards.length);
+    } while (newIndex === currentIndex && flashcards.length > 1);
+    
+    setCurrentIndex(newIndex);
+  };
+
   const addFlashcard = (text: string) => {
     const newFlashcard: Flashcard = {
       id: Date.now().toString(),
@@ -69,6 +80,7 @@ export function useFlashcards() {
     currentIndex,
     nextFlashcard,
     prevFlashcard,
+    showRandomFlashcard,
     addFlashcard,
     updateFlashcard,
     deleteFlashcard,
