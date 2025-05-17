@@ -13,7 +13,7 @@ const Flashcard: React.FC<FlashcardProps> = ({ text, onRandomCard }) => {
       onClick={onRandomCard}
       aria-label="Show random flashcard"
     >
-      <p className="text-6xl font-medium text-center py-24">{text}</p>
+      <p className="text-8xl font-medium text-center py-24">{text}</p>
     </div>
   );
 };
