@@ -48,6 +48,10 @@ const Index = () => {
     toast("Flashcards saved successfully!");
   };
 
+  const handleDismissWelcome = () => {
+    setShowWelcome(false);
+  };
+
   return (
     <div className="h-[100vh] flex flex-col bg-white overflow-hidden">
       {/* Edit Button (Top Right) */}
@@ -65,8 +69,11 @@ const Index = () => {
       {/* Flashcard Container */}
       <main className="flex-1 flex items-center justify-center overflow-hidden">
         {showWelcome && (
-          <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 z-20">
-            <p className="text-4xl text-gray-800">タップして</p>
+          <div 
+            className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 z-20"
+            onClick={handleDismissWelcome}
+          >
+            <p className="text-4xl text-gray-800">タップしてカードをめくろう</p>
           </div>
         )}
         
