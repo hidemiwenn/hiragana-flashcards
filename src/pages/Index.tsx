@@ -70,10 +70,10 @@ const Index = () => {
       <main className="flex-1 flex items-center justify-center overflow-hidden">
         {showWelcome && (
           <div 
-            className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 z-20"
+            className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-70 backdrop-blur-[40px] z-20"
             onClick={handleDismissWelcome}
           >
-            <p className="text-4xl text-gray-800">タップしてカードをめくろう</p>
+            <p className="text-4xl text-gray-800 px-6 py-4 text-center max-w-full mx-auto px-[24px]">タップしてカードをめくろう</p>
           </div>
         )}
         
